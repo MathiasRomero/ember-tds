@@ -1,0 +1,10 @@
+{{page-title "Ex2"}}
+
+<ul>
+{{#each @model.services as |srv|}}
+  <li>{{srv.name}}</li>
+{{/each}}
+</ul>
+{{@model.countActive}}
+
+{{outlet}}
