@@ -1,10 +1,17 @@
 {{page-title "Ex2"}}
 
+<div class="alert alert-info">
+  <span>Cliquez sur un service pour le séléctionner</span>
+</div>
+
 <ul>
 {{#each @model.services as |srv|}}
-  <li>{{srv.name}}</li>
+  <li class="list-group-item {{if srv.active "active"}}" {{action "toggleActive" srv }}>{{srv.name}} {{srv.price}}</li>
 {{/each}}
 </ul>
-{{@model.countActive}}
+
+<p> {{plural @model.countActive}}</p>
+<p class="alert alert-info"> Total : {{format-currency @model.sumActive "$"}}</p>
+
 
 {{outlet}}
