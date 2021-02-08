@@ -1,32 +1,18 @@
+import { tracked } from "@glimmer/tracking";
 
 export default class Services {
   services = [];
-  promo = {
-    B22: 0.05,
-    AZ: 0.01,
-    UBOAT: 0.02,
-  };
+  promo = [];
+  @tracked code = '';
 
   get promoValue() {
-
-    let code = document.getElementById("promo").value;
-    let check = document.getElementById('promoCheck');
+    let check = document.getElementById("promoCheck");
 
     if (check.checked) {
-      //document.getElementById('remise').style.display = 'block';
-      //document.getElementById('total').visible;
-      if (code == 'B22') {
-        return this.sumActive * this.promo.B22;
+      console.log('code promo : ' + this.code);
+      if (this.code in this.promo) {
+        return this.promo[this.code] * this.sumActive;
       }
-      if (code == 'AZ') {
-        return this.sumActive * this.promo.AZ;
-      }
-      if (code == 'UBOAT') {
-        return this.sumActive * this.promo.UBOAT;
-      }
-    } else {
-      //document.getElementById('remise').style.display = 'none';
-      //document.getElementById('total').style.display = 'none';
     }
     return 0;
   }
@@ -35,8 +21,9 @@ export default class Services {
     return this.sumActive - this.promoValue;
   }
 
-  constructor(serv) {
+  constructor(serv,promo) {
     this.services = serv;
+    this.promo = promo
   }
 
 
