@@ -6,12 +6,20 @@
 
 <ul>
 {{#each @model.services as |srv|}}
-  <li class="list-group-item {{if srv.active "active"}}" {{action "toggleActive" srv }}>{{srv.name}} {{srv.price}}</li>
+  <li class="list-group-item {{if srv.active "active"}}" {{action "toggleActive" srv}}>{{srv.name}} {{srv.price}}</li>
 {{/each}}
 </ul>
 
 <p> {{plural @model.countActive}}</p>
 <p class="alert alert-info"> Total : {{format-currency @model.sumActive "$"}}</p>
+
+<div class="alert alert-info">
+  <input type="checkbox" id="promoCheck" name="promoCheck" value="">
+  <input type="text" id="promo" name="promo" placeholder="code promo">
+</div>
+
+<p class="alert alert-info" id="remise"> Remise : {{format-currency @model.promoValue "$"}}</p>
+<p class="alert alert-info" id="total" > Total avec remise : {{format-currency @model.priceWithPromo   "$"}}</p>
 
 
 {{outlet}}
