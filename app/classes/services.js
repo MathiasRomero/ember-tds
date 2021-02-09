@@ -18,6 +18,9 @@ export default class Services {
   }
 
   get priceWithPromo() {
+
+    let remise = document.getElementById("remise");
+    remise.innerHTML = 'Remise : ' + this.promoValue + ' $';
     return this.sumActive - this.promoValue;
   }
 
