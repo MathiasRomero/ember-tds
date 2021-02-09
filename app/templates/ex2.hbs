@@ -6,7 +6,7 @@
 
 <ul>
 {{#each @model.services as |srv|}}
-  <li class="list-group-item {{if srv.active "active"}}" {{action "toggleActive" srv}}>{{srv.name}} {{srv.price}}</li>
+  <li class="list-group-item {{if srv.active "active"}}" {{action "toggleActive" srv}}>{{srv.name}} {{srv.price}} $</li>
 {{/each}}
 </ul>
 

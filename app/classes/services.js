@@ -1,4 +1,4 @@
-import { tracked } from "@glimmer/tracking";
+import { tracked } from '@glimmer/tracking';
 
 export default class Services {
   services = [];
@@ -6,7 +6,7 @@ export default class Services {
   @tracked code = '';
 
   get promoValue() {
-    let check = document.getElementById("promoCheck");
+    let check = document.getElementById('promoCheck');
 
     if (check.checked) {
       console.log('code promo : ' + this.code);
@@ -21,11 +21,10 @@ export default class Services {
     return this.sumActive - this.promoValue;
   }
 
-  constructor(serv,promo) {
+  constructor(serv, promo) {
     this.services = serv;
-    this.promo = promo
+    this.promo = promo;
   }
-
 
   get countActive() {
     console.log(
