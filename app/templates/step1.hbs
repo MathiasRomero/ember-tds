@@ -1,2 +1,24 @@
 {{page-title "Step1"}}
+
+
+<div class="">
+  <p style="font-size: 40px">Sélectionnez vos produits</p>
+  <p style="font-size: 20px">Produits disponibles</p>
+</div>
+
+<ul>
+  {{#each @model.services as |srv|}}
+    <li class="list-group-item {{if srv.active "active"}}" {{action "toggleActive" srv}}>{{srv.name}} {{srv.price}} $</li>
+  {{/each}}
+</ul>
+
+
+
+<select id="dispo" multiple>
+  {{#each @model.produitDispo as |pdt|}}
+    <option value={{pdt.id}}>{{pdt.title}}</option>
+  {{/each}}
+</select>
+
+
 {{outlet}}
