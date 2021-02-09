@@ -7,10 +7,14 @@ export default class Services {
 
   get promoValue() {
     let check = document.getElementById('promoCheck');
+    let remise = document.getElementById('remise');
 
     if (check.checked) {
       console.log('code promo : ' + this.code);
+      remise.innerHTML = 'Code promo non valide';
       if (this.code in this.promo) {
+        remise.innerHTML =
+          'Remise : ' + this.promo[this.code] * this.sumActive + ' $';
         return this.promo[this.code] * this.sumActive;
       }
     }
@@ -18,9 +22,6 @@ export default class Services {
   }
 
   get priceWithPromo() {
-
-    let remise = document.getElementById("remise");
-    remise.innerHTML = 'Remise : ' + this.promoValue + ' $';
     return this.sumActive - this.promoValue;
   }
 
