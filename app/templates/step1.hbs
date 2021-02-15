@@ -6,19 +6,27 @@
   <p style="font-size: 20px">Produits disponibles</p>
 </div>
 
-<ul>
-  {{#each @model.services as |srv|}}
-    <li class="list-group-item {{if srv.active "active"}}" {{action "toggleActive" srv}}>{{srv.name}} {{srv.price}} $</li>
-  {{/each}}
-</ul>
-
-
-
-<select id="dispo" multiple>
+<div>
+<div>
+<select class="form-select" size="10" id="dispo" multiple>
   {{#each @model.produitDispo as |pdt|}}
     <option value={{pdt.id}}>{{pdt.title}}</option>
   {{/each}}
 </select>
+</div>
+<select class="form-select" size="10" id="inclure" multiple>
+  {{#each @model.produitInclure as |pdt|}}
+    <option value={{pdt.id}}>{{pdt.title}}</option>
+  {{/each}}
+</select>
+</div>
+<div>
+  <button type="button" onclick={{@model.switchAll}} class="btn btn-primary">▶</button>
+  <button type="button" class="btn btn-primary">▶▶</button>
+  <button type="button" class="btn btn-primary">◀</button>
+  <button type="button" class="btn btn-primary">◀◀</button>
+</div>
+
 
 
 {{outlet}}
