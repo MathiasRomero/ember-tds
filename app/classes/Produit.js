@@ -14,11 +14,34 @@ export default class Produit {
   }
 
   @action
-  switchAll(){
-    this.produitInclure = this.produitDispo;
-    this.produitDispo = [];
-    console.log("Switch");
-    console.log(this.produitInclure);
+  inclusAll() {
+    this.produitInclure = this.produitInclure.concat(this.produitDispo);
+    this.produitDispo = [0];
+
+
+    if(this.produitInclure[0] == 0){ // Permet de supprimer la ligne vide générer par la concatenation au début
+      this.produitInclure.shift();
+    }
+    if(this.produitInclure[this.produitInclure.length - 1] == 0){ // Permet de supprimer la ligne vide générer par la concatenation
+      this.produitInclure.pop();
+    }
+
+
+  }
+
+
+  @action
+  dispoAll(){
+    this.produitDispo = this.produitDispo.concat(this.produitInclure);
+    this.produitInclure = [0];
+
+    if(this.produitDispo[0] == 0){ // Permet de supprimer la ligne vide générer par la concatenation au début
+      this.produitDispo.shift();
+    }
+
+    if(this.produitDispo[this.produitDispo.length - 1] == 0){ // Permet de supprimer la ligne vide générer par la concatenation
+      this.produitDispo.pop();
+    }
   }
 
 }
