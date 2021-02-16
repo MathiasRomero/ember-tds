@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a337512-0107-427c-8a9a-a910e08de407" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/classes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/classes/Contacts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/serializers/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/classes/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/contacts.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/contacts.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
       <workItem from="1612873383538" duration="574000" />
       <workItem from="1613402758841" duration="4287000" />
       <workItem from="1613407303371" duration="4301000" />
-      <workItem from="1613479621342" duration="5002000" />
+      <workItem from="1613479621342" duration="5592000" />
     </task>
     <servers />
   </component>
