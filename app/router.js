@@ -11,5 +11,6 @@ Router.map(function () {
   this.route('testList');
   this.route('contacts', function() {
     this.route('add');
+    this.route('update');
   });
 });
