@@ -13,6 +13,4 @@ export default class TestNewRoute extends Route {
       contact.save().then(()=>{
         this.transitionTo('testList')});
     }
-
-
 }

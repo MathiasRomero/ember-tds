@@ -5,6 +5,7 @@ export default class ContactsRoute extends Route {
 
   model(){
     return this.get('store').findAll('contact');
+
   }
 
   @action
