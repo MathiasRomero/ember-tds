@@ -13,4 +13,5 @@ Router.map(function () {
     this.route('add');
     this.route('update');
   });
+  this.route('categories');
 });
