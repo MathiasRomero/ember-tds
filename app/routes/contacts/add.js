@@ -11,7 +11,7 @@ export default class ContactsAddRoute extends Route {
 
   @action
   add(contact){
-    contact.save();
-  }
-
+    contact.save().then(()=>{
+      this.transitionTo('contacts')});
+  };
 }

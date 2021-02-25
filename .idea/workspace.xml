@@ -6,12 +6,7 @@
       <change beforePath="$PROJECT_DIR$/app/classes/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/classes/Contacts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/contacts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/contacts/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/contacts/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/test-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/test-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/test-new.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/test-new.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/contacts.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/contacts.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/contacts/add.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/contacts/add.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/test-list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/test-list.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/test-new.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/test-new.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +69,7 @@
       <workItem from="1613402758841" duration="4287000" />
       <workItem from="1613407303371" duration="4301000" />
       <workItem from="1613479621342" duration="8761000" />
+      <workItem from="1614246780346" duration="3830000" />
     </task>
     <servers />
   </component>

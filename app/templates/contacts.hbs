@@ -1,9 +1,13 @@
 {{page-title "Contacts"}}
 
 <ul>
-  {{#each @model as |contact| }}
+  {{#each @model.datas as |contact| }}
     <li>{{contact.nom}}</li>
   {{/each}}
 </ul>
+
+
+
+{{#link-to 'contacts.add' class="btn btn-success"tagName='button'}}ajouter{{/link-to}}
 
 {{outlet}}
