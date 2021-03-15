@@ -8,4 +8,4 @@ export default class Abstractroute extends Route {
       this.transitionTo('index');
     }
   }
-}embe
+}
