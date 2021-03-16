@@ -26,7 +26,7 @@ export default class IndexRoute extends Route {
           if (password == user.password) {
             this.userAuth.login(user);
             console.log("User connected");
-            //this.transition;
+            this.transitionTo('board');
           }else{
             console.log("Bad Password");
           }
