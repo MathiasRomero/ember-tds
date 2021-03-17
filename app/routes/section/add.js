@@ -10,4 +10,19 @@ export default class SectionAddRoute extends Route {
     this.transitionTo('section');
   }
 
+  @action
+  addSection(name, description){
+
+    console.log(name);
+    console.log(description);
+
+    let section = new section;
+
+    section.setName(name);
+    section.setDescription(description);
+
+    this.store.put(section);
+
+}
+
 }

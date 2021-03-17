@@ -12,5 +12,6 @@ Router.map(function () {
   this.route('logout');
   this.route('section', function() {
     this.route('add');
+    this.route('addProduct');
   });
 });

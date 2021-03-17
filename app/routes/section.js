@@ -7,9 +7,22 @@ export default class SectionRoute extends Route {
 
   @service userAuth;
 
+  model() {
+
+    return this.store.query('section',{});
+
+  }
+
+
+
   @action
   addSection(){
     this.transitionTo('section.add');
+  }
+
+  @action
+  addProduit(){
+    this.transitionTo('section.addProduct');
   }
 
   @action
