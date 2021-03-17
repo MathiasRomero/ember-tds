@@ -2,10 +2,14 @@
 
 <nav class="navbar navbar-light bg-light">
 <button class="btn btn-outline-success my-2 my-sm-0"{{action "initialize"}}>Initialize</button>
+  <l>{{model.employee}} </l>
 <button class="btn btn-outline-danger my-2 my-sm-0" {{action "disconnect"}}>Logout</button>
 </nav>
 
-<div class="container p-3 my-3 bg-dark text-white">
+<div class="container p-3 my-3 bg-dark text-white"style="border-radius: 10px;">
   <h1>Gestion du Store</h1>
+  <nav class="navbar navbar-light" style="background-color: #FFFFFF; border-radius: 10px;  ">
+    <button class="btn btn-outline-success my-2 my-sm-0"{{action "goToSection"}}>Modifier Section</button>
+    {{outlet}}
+  </nav>
 </div>
-{{outlet}}
