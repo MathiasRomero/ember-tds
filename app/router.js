@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('Abstractroute');
   this.route('board');
   this.route('logout');
+  this.route('section');
 });

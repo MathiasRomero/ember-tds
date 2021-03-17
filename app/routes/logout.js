@@ -3,6 +3,7 @@ import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 
+
 export default class LogoutRoute extends Route {
 
   @action

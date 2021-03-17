@@ -1,10 +1,11 @@
 {{page-title "Board"}}
 
+<nav class="navbar navbar-light bg-light">
+<button class="btn btn-outline-success my-2 my-sm-0"{{action "initialize"}}>Initialize</button>
+<button class="btn btn-outline-danger my-2 my-sm-0" {{action "disconnect"}}>Logout</button>
+</nav>
 
-<div class="container">
-
-
-  <button class="btn btn-lg btn-primary btn-block text-uppercase"{{action "initialize"}}>Initialize</button>
-<button class="btn btn-lg btn-primary btn-block text-uppercase"{{action "disconnect"}}>Logout</button>
+<div class="container p-3 my-3 bg-dark text-white">
+  <h1>Gestion du Store</h1>
 </div>
 {{outlet}}
