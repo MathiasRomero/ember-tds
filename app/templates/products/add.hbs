@@ -1,0 +1,17 @@
+{{page-title "Add"}}
+
+<div class="container p-3 my-3 bg-dark text-white"style="border-radius: 10px;">
+  <div class="container p-3 my-3 bg-light text-dark"style="border-radius: 10px;">
+    <h1 class="text-align-center"> Ajout de produit</h1>
+    <div style="margin-top: 15px">
+
+      <Input type="text" style="border-radius: 4px;" placeholder="name.." @value={{model.name}}/>
+      <Input type="number" style="border-radius: 4px;" placeholder="price.." @value={{model.price}}/>
+
+      <button class="btn btn-outline-success my-2 my-sm-0"{{action "addSection" @model}}>Ajouter</button>
+      <button class="btn btn-outline-danger my-2 my-sm-0"{{action "goBack"}}>Retour</button>
+    </div>
+  </div>
+</div>
+
+{{outlet}}

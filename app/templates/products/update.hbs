@@ -1,0 +1,17 @@
+{{page-title "Update"}}
+{{outlet}}
+
+<div class="container p-3 my-3 bg-dark text-white"style="border-radius: 10px;">
+  <div class="container p-3 my-3 bg-light text-dark"style="border-radius: 10px;">
+    <h1 class="text-align-center">Modification du produit</h1>
+    <div style="margin-top: 15px">
+
+      <Input type="text" style="border-radius: 4px;" placeholder="name.." @value={{model.name}}/>
+      <Input type="text" style="border-radius: 4px;" placeholder="prix" @value={{model.price}}/>
+
+      <button class="btn btn-outline-success my-2 my-sm-0"{{action "modif" @model}}>Sauvegarder</button>
+      <button class="btn btn-outline-danger my-2 my-sm-0"{{action "goBack"}}>Retour</button>
+    </div>
+  </div>
+</div>
+

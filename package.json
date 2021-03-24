@@ -72,5 +72,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "rsvp": "^4.8.5"
   }
 }

@@ -1,2 +1,35 @@
 {{page-title "Products"}}
-{{outlet}}
+<nav class="navbar navbar-light bg-light">
+  <button class="btn btn-outline-success my-2 my-sm-0"{{action "initialize"}}>Initialize</button>
+  <l>{{model.employee}} </l>
+  <button class="btn btn-outline-danger my-2 my-sm-0" {{action "disconnect"}}>Logout</button>
+</nav>
+
+<div class="container p-3 my-3 bg-dark text-white"style="border-radius: 10px;">
+  <h1>Gestion du Store</h1>
+  <nav class="navbar navbar-light" style="background-color: #FFFFFF; border-radius: 5px;  ">
+   <!-- <button class="btn btn-outline-success my-2 my-sm-0"{{action "addSection"}}>Nouvelle section..</button> -->
+    <LinkTo class="btn btn-outline-success my-2 my-sm-0"@route="products.add">Nouveau  produit..</LinkTo>
+  </nav>
+
+  {{outlet}}
+
+<ul>
+  {{#each @model as |product|}}
+    <li style="margin-top: 20px;">{{product.name}}
+      <LinkTo class="btn btn-outline-warning btn-sm float-right"style="margin-right: 20px" @route="products.update" @model={{product}}>
+      <i> modifier</i>
+     </LinkTo>
+
+
+      <ul>
+        {{#each product.packs as |pack|}}
+          <li>{{pack.Name}}</li>
+        {{/each}}
+      </ul>
+    </li>
+  {{/each}}
+</ul>
+
+
+</div>
