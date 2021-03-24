@@ -5,24 +5,27 @@ import abstractRoute from '../../routes/abstractroute';
 
 export default class SectionAddRoute extends Route {
 
+
+  model() {
+    return {};
+  }
+
   @action
   goBack(){
     this.transitionTo('section');
   }
 
   @action
-  addSection(name, description){
+  addSection(section){
 
-    console.log(name);
-    console.log(description);
+    console.log(section.name);
+    console.log(section.description);
 
-    let section = new section;
-
-    section.setName(name);
-    section.setDescription(description);
-
-    this.store.put(section);
-
+    let sec = this.store.createRecord('section',section);
+    sec.save();
+    this.transitionTo('section');
 }
+
+
 
 }

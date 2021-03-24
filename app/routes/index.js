@@ -21,6 +21,8 @@ export default class IndexRoute extends Route {
         },
       })
       .then((users) => {
+
+
         if (users.length) {
           let user = users.firstObject;
           if (password == user.password) {

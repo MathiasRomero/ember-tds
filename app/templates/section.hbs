@@ -18,9 +18,10 @@
   {{#each @model as |sec|}}
     <li style="margin-top: 10px">
       <h5 style="width: 400px; margin-right: 0px">{{sec.name}}</h5>
-      <l><i>{{sec.description}}</i></l>
-      <button class="btn btn-outline-danger btn-sm float-right" {{action "DeleteSection"}}>Supprimer</button>
-      <button class="btn btn-outline-warning btn-sm float-right"style="margin-right: 20px" {{action "ModifierSelection"}}>Modifier</button>
+      <button class="btn btn-outline-danger btn-sm float-right" {{action "DeleteSection" sec}}>Supprimer</button>
+      <button class="btn btn-outline-warning btn-sm float-right"style="margin-right: 20px" {{action "ModifierSelection" sec}}>Modifier</button>
+      <span><i>{{sec.description}}</i></span>
+
     </li>
   {{/each}}
     </ul>

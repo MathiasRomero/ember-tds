@@ -26,6 +26,14 @@ export default class SectionRoute extends Route {
   }
 
   @action
+  DeleteSection(section){
+
+   // let sec = this.store.findRecord('section',section.id);
+    section.deleteRecord();
+    section.save();
+  }
+
+  @action
   disconnect(){
     this.userAuth.logout();
     this.transitionTo('logout');

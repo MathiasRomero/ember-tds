@@ -11,7 +11,7 @@
       <Input type="text" style="border-radius: 4px;" placeholder="name.." @value={{model.name}}/>
       <Input type="text" style="border-radius: 4px;" placeholder="description.." @value={{model.description}}/>
 
-  <button class="btn btn-outline-success my-2 my-sm-0"{{action "addSection" model.name model.description}}>Ajouter</button>
+  <button class="btn btn-outline-success my-2 my-sm-0"{{action "addSection" @model}}>Ajouter</button>
   <button class="btn btn-outline-danger my-2 my-sm-0"{{action "goBack"}}>Retour</button>
     </div>
   </div>
