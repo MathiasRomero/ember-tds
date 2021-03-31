@@ -1,3 +1,4 @@
+app.import('node_modules/moment/locale/fr.js');
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');

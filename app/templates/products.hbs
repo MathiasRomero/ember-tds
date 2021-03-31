@@ -1,6 +1,6 @@
 {{page-title "Products"}}
 <nav class="navbar navbar-light bg-light">
-  <button class="btn btn-outline-success my-2 my-sm-0"{{action "initialize"}}>Initialize</button>
+  <LinkTo class="btn btn-outline-success my-2 my-sm-0"@route="board" >Board</LinkTo>
   <l>{{model.employee}} </l>
   <button class="btn btn-outline-danger my-2 my-sm-0" {{action "disconnect"}}>Logout</button>
 </nav>

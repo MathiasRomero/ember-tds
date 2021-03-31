@@ -7,6 +7,10 @@ export default class BoardRoute extends abstractRoute {
 
   @service userAuth;
 
+  model(){
+    return {};
+  }
+
   @action
   initialize(){
     let id = 1;

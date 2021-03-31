@@ -1,5 +1,6 @@
 'use strict';
 
+
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'tds',
@@ -22,6 +23,8 @@ module.exports = function (environment) {
       // when it is created
     },
   };
+
+  ENV.moment = { includeLocales: ['en', 'fr'] };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

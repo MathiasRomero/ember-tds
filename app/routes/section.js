@@ -25,12 +25,16 @@ export default class SectionRoute extends Route {
     this.transitionTo('section.addProduct');
   }
 
-  @action
-  DeleteSection(section){
-
-   // let sec = this.store.findRecord('section',section.id);
-    section.deleteRecord();
-    section.save();
+  async deleteProducts(products) {
+    while (products.firstObject) {
+      let p = products.firstObject;
+      await p.destroyRecord();
+    }
+  }
+  @action DeleteSection(section) {
+    this.deleteProducts(section.products).then(() => {
+      section.destroyRecord();
+    });
   }
 
   @action
