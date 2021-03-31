@@ -13,4 +13,20 @@
     <LinkTo class="btn btn-outline-success my-2 my-sm-0" @route="products">Modifier Produit</LinkTo>
     {{outlet}}
   </nav>
+
+  <div style="margin-top: 10px">
+    <ul>
+      {{#each @model.orders as |order|}}
+        <li style="margin-top: 10px">
+          <LinkTo @route="order" @model={{order.id}}>
+            {{order.dateCreation}} <span class="ui circular label">{{order.count}}</span>
+          </LinkTo>
+          <!--<button class="btn btn-outline-danger btn-sm float-right" {{action ""}}>Supprimer</button>
+          <button class="btn btn-outline-warning btn-sm float-right"style="margin-right: 20px" {{action ""}}>Modifier</button> -->
+
+
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

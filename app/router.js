@@ -19,4 +19,5 @@ Router.map(function () {
     this.route('update',{ path: '/update/:product_id'});
   });
   this.route('product');
+  this.route('order',{ path: '/order/:order_id'});
 });

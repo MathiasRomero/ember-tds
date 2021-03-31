@@ -7,11 +7,16 @@ export default class ProductsAddRoute extends Route {
 
 
   @action
-  addSection(produit){
+  addProduit(produit){
 
     let pro = this.store.createRecord('product',produit);
     pro.save();
-    this.transitionTo('produit');
+    this.transitionTo('products');
+  }
+
+  @action
+  goBack(){
+    this.transitionTo('products');
   }
 
 }
