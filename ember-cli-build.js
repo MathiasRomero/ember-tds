@@ -1,4 +1,4 @@
-app.import('node_modules/moment/locale/fr.js');
+
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
@@ -10,6 +10,8 @@ module.exports = function (defaults) {
       importBootstrapCSS: true
     }
   });
+
+  app.import('node_modules/moment/locale/fr.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
