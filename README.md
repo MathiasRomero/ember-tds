@@ -1,7 +1,9 @@
 # tds
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Application WEB d'un magasin, avec une gestion des commandes et un pannel de connexion employé.
+
+L'application WEB est réalisé en emberJS sous le schéma MVC, avec une partie graphique utilisant AngularJS ainsi que Bootstrap.
+l'application comunnique avec une API rest qui stock la base de donnée.
 
 ## Prerequisites
 
@@ -9,7 +11,7 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
+* [Ember CLI](https://ember-cli.com/)	
 * [Google Chrome](https://google.com/chrome/)
 
 ## Installation
